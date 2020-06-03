@@ -24,14 +24,15 @@ const Login: React.FC = () => {
 
                <IonItem class="ion-margin-top">
                   <IonLabel position="stacked">Password</IonLabel>
-                  <IonInput></IonInput>
+                  <IonInput type="password"></IonInput>
                </IonItem>
 
-
-               <IonButton expand="block" className="login-btn">Login</IonButton>
+               <a href="/home">
+                  <IonButton expand="block" className="login-btn">Login</IonButton>
+               </a>
             </form>
          </IonContent>
-      </IonPage>
+      </IonPage >
    );
 };
 
