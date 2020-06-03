@@ -9,3 +9,11 @@
 .login-btn {
    margin-top: 3rem;
 }
+
+
+small{
+   display: block;
+   width: 100%;
+   text-align: right;
+   color: red;
+}
