@@ -6,3 +6,11 @@ export function checkStrLength(str: string) {
    return '';
 }
 
+export function doesPasswordsMatch(first: string, second: string) {
+   if (first === second) {
+      return true;
+   }
+
+   return false;
+}
+
