@@ -1,0 +1,7 @@
+{
+  "name": "kart-ton-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
