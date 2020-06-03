@@ -11,18 +11,21 @@ import React, { useState } from 'react';
 
 import './Login.css';
 
+import { checkStrLength } from '../hooks/validateForm';
+
 const Login: React.FC = () => {
    const [username, setUsername] = useState<any>('');
    const [password, setPassword] = useState('');
    const [usernameAlert, setUsernameAlert] = useState('');
 
    function validateUsername() {
-      if (username.length < 6) {
-         setUsernameAlert('Username should at least be 6 characters.');
-      } else {
-         setUsernameAlert('');
-      }
+      let uAlert = checkStrLength(username);
+      setUsernameAlert(uAlert);
    }
+
+
+
+
 
    function handleSubmit() {
 
