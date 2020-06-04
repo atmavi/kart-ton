@@ -50,6 +50,7 @@ const Login: React.FC = () => {
                   <IonLabel position="stacked">Username</IonLabel>
                   <small>{usernameAlert}</small>
                   <IonInput
+                     required
                      onIonChange={e => setUsername(e.detail.value)}
                      onIonBlur={validateUsername}
                   ></IonInput>
@@ -58,6 +59,7 @@ const Login: React.FC = () => {
                <IonItem class="ion-margin-top">
                   <IonLabel position="stacked">Password</IonLabel>
                   <IonInput
+                     required
                      type="password"
                      onIonChange={e => setPassword(e.detail.value)}
                      onIonBlur={validatePassword}
