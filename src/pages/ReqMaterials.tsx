@@ -39,11 +39,11 @@ interface IRequestMaterial {
 
 const ReqMaterials: React.FC = () => {
    const [formDisplay, setFormDisplay] = useState<boolean>(false);
+   const [showPopover, setShowPopover] = useState(false);
 
 
    function ToggleDisplay() {
       setFormDisplay(!formDisplay);
-      console.log(formDisplay);
    }
 
    return (
@@ -55,7 +55,8 @@ const ReqMaterials: React.FC = () => {
          </IonHeader>
          <IonContent className="ion-padding">
             <IonFab vertical="bottom" horizontal="end" slot="fixed">
-               <IonFabButton onClick={ToggleDisplay}>
+               <IonFabButton
+                  onClick={ToggleDisplay}>
                   <IonIcon icon={add} />
                </IonFabButton>
             </IonFab>
