@@ -44,6 +44,7 @@ const Register: React.FC = () => {
                   <IonLabel position="stacked">Username</IonLabel>
                   <small>{usernameAlert}</small>
                   <IonInput
+                     required
                      onIonChange={e => setUsername(e.detail.value)}
                      onIonBlur={validateUsername}
                   ></IonInput>
@@ -52,6 +53,7 @@ const Register: React.FC = () => {
                <IonItem class="ion-margin-top">
                   <IonLabel position="stacked">Password</IonLabel>
                   <IonInput
+                     required
                      type="password"
                      onIonChange={e => setPass1(e.detail.value)}
                   ></IonInput>
@@ -60,6 +62,7 @@ const Register: React.FC = () => {
                <IonItem class="ion-margin-top">
                   <IonLabel position="stacked">Re-password</IonLabel>
                   <IonInput
+                     required
                      type="password"
                      onIonChange={e => setPass2(e.detail.value)}
                      onIonBlur={validateBothPass}
