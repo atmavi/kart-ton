@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 
 import './Login.css';
 
-import { checkStrLength } from '../hooks/validateForm';
+import { checkStrLength } from '../../hooks/validateForm';
 
 const Login: React.FC = () => {
    const [username, setUsername] = useState<any>('');

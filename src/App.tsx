@@ -4,11 +4,11 @@ import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 //Pages
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Projects from './pages/Projects';
-import ReqMaterials from './pages/ReqMaterials';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import Projects from './pages/Projects/Projects';
+import ReqMaterials from './pages/ReqMaterials/ReqMaterials';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';

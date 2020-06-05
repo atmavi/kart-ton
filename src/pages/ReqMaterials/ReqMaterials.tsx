@@ -22,8 +22,6 @@ import { add } from 'ionicons/icons'
 import React, { useState } from 'react';
 import './ReqMaterials.css';
 
-import RequestForm from '../components/RequestForm';
-
 interface IRequestMaterial {
    id: string,
    deliveryDate: string,

@@ -9,7 +9,7 @@ import {
 import React, { useState } from 'react';
 import './Register.css';
 
-import { checkStrLength, doesPasswordsMatch } from '../hooks/validateForm';
+import { checkStrLength, doesPasswordsMatch } from '../../hooks/validateForm';
 
 const Register: React.FC = () => {
    const [username, setUsername] = useState<any>('');
