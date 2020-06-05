@@ -5,19 +5,12 @@ import {
    IonTitle,
    IonContent,
    IonButtons,
-   IonMenuButton,
    IonPage,
    IonItem,
    IonLabel,
-   IonInput,
    IonButton,
-   IonAvatar,
    //CARD
-   IonCard,
-   IonCardContent,
-   IonCardHeader,
-   IonCardSubtitle,
-   IonCardTitle
+   IonCard
 } from '@ionic/react';
 import { person, logOutOutline } from 'ionicons/icons';
 import React, { useState } from 'react';
