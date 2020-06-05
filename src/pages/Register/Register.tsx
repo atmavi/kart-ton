@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
    IonContent,
    IonPage,
@@ -6,7 +7,6 @@ import {
    IonInput,
    IonButton
 } from '@ionic/react';
-import React, { useState } from 'react';
 import './Register.css';
 
 import { checkStrLength, doesPasswordsMatch } from '../../hooks/validateForm';

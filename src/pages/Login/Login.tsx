@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
    IonContent,
    IonPage,
@@ -6,8 +7,6 @@ import {
    IonInput,
    IonButton
 } from '@ionic/react';
-
-import React, { useState } from 'react';
 
 import './Login.css';
 
