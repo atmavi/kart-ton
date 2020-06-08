@@ -41,7 +41,7 @@ const App: React.FC = () => (
         <Route path="/login" component={Login} exact={true} />
         <Route path="/projects" component={Projects} exact={true} />
         <Route path="/register" component={Register} exact={true} />
-        <Route path="/requestMaterials" component={ReqMaterials} exact={true} />
+        <Route path="/request-materials" component={ReqMaterials} exact={true} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
