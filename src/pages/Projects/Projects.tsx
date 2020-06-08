@@ -11,7 +11,7 @@ import {
 import { person, logOutOutline } from 'ionicons/icons';
 import React, { useState } from 'react';
 
-import ViewProject from '../../components/ViewProject/ViewProject';
+import Project from '../../components/Project/Project';
 import './Projects.css';
 
 export interface IProject {
@@ -77,7 +77,7 @@ const Projects: React.FC = () => {
             <h2>Projects:</h2>
 
             {projects.map((proj: IProject, i) => (
-               <ViewProject project={proj} key={i}></ViewProject>
+               <Project project={proj} key={i}></Project>
             ))}
 
          </IonContent>
