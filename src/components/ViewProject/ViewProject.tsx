@@ -10,7 +10,12 @@ import {
 } from '@ionic/react';
 import './ViewProject.css';
 
-const ViewProject: React.FC = () => {
+interface IViewProject {
+   test: string
+}
+
+const ViewProject: React.FC<IViewProject> = props => {
+   console.log(props);
    return (
       <div className="container">
          <h1>test</h1>
