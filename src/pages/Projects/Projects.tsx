@@ -6,10 +6,7 @@ import {
    IonContent,
    IonButtons,
    IonPage,
-   IonItem,
-   IonLabel,
    IonButton,
-   IonCard
 } from '@ionic/react';
 import { person, logOutOutline } from 'ionicons/icons';
 import React, { useState } from 'react';
@@ -17,7 +14,7 @@ import React, { useState } from 'react';
 import ViewProject from '../../components/ViewProject/ViewProject';
 import './Projects.css';
 
-interface IProject {
+export interface IProject {
    title: string,
    start: any,
    end: any,
@@ -83,35 +80,12 @@ const Projects: React.FC = () => {
          </IonHeader>
 
          <IonContent className="ion-padding">
-
-            //TESTING
-            <ViewProject test='testing...'></ViewProject>
-
-
             <h2>Projects:</h2>
 
-            {projects.map((proj, i) => (
-
-               <IonCard class="ion-padding-top ion-padding-bottom" key={i}>
-                  <IonItem>
-                     <IonTitle class="ion-text-start" slot="start">{proj.title}</IonTitle>
-                     <IonButton
-                        fill="outline"
-                        slot="end"
-                        onClick={() => console.log('clicked')}
-                     >View</IonButton>
-                  </IonItem>
-
-                  <div className="avatar-container">
-                     {proj.avatars?.map((avatar, i) => (
-                        <img className="card-avatar" src={avatar} alt="" key={i} />
-                     ))}
-                  </div>
-
-                  <IonLabel class="ion-padding">{`${proj.start} - ${proj.end}`}</IonLabel>
-               </IonCard>
-
+            {projects.map((proj: IProject, i) => (
+               <ViewProject project={proj} key={i}></ViewProject>
             ))}
+
          </IonContent>
       </IonPage>
    );
