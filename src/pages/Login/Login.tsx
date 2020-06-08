@@ -16,16 +16,10 @@ const Login: React.FC = () => {
    const [username, setUsername] = useState<any>('');
    const [password, setPassword] = useState<any>('');
    const [usernameAlert, setUsernameAlert] = useState('');
-   const [userPassAlert, setPassAlert] = useState('');
 
    function validateUsername() {
       let uAlert = checkStrLength(username);
       setUsernameAlert(uAlert);
-   }
-
-   function validatePassword() {
-      let pAlert = checkStrLength(password);
-      setPassAlert(pAlert);
    }
 
    function handleSubmit() {
@@ -61,7 +55,6 @@ const Login: React.FC = () => {
                      required
                      type="password"
                      onIonChange={e => setPassword(e.detail.value)}
-                     onIonBlur={validatePassword}
                   ></IonInput>
                </IonItem>
 
