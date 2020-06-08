@@ -9,18 +9,20 @@ import {
    IonItem,
    IonLabel,
    IonButton,
-   //CARD
    IonCard
 } from '@ionic/react';
 import { person, logOutOutline } from 'ionicons/icons';
 import React, { useState } from 'react';
+
+import ViewProject from '../../components/ViewProject/ViewProject';
 import './Projects.css';
 
 interface IProject {
    title: string,
    start: any,
    end: any,
-   avatars?: Array<string>
+   avatars?: Array<string>,
+   budget?: number
 }
 
 
@@ -36,7 +38,8 @@ const Projects: React.FC = () => {
                'https://www.photosforclass.com/download/pixabay-310819?webUrl=https%3A%2F%2Fpixabay.com%2Fget%2F55e1d54b4b5bb108f5d084609620367d1c3ed9e04e507440742d7fd5934fc3_1280.png&user=Clker-Free-Vector-Images',
                'https://pixabay.com/get/57e5d3464256b10ff3d8992ccf2934771438dbf852547848772b7ad0954b_340.png',
                'https://pixabay.com/get/55e1d54b4a55b10ff3d8992ccf2934771438dbf852547848772b7ad0954b_340.png'
-            ]
+            ],
+            budget: 2000000
          },
          {
             title: 'Project 2',
@@ -80,19 +83,28 @@ const Projects: React.FC = () => {
          </IonHeader>
 
          <IonContent className="ion-padding">
+
+            //TESTING
+            <ViewProject test='testing...'></ViewProject>
+
+
             <h2>Projects:</h2>
 
-            {projects.map(proj => (
+            {projects.map((proj, i) => (
 
-               <IonCard class="ion-padding-top ion-padding-bottom">
+               <IonCard class="ion-padding-top ion-padding-bottom" key={i}>
                   <IonItem>
                      <IonTitle class="ion-text-start" slot="start">{proj.title}</IonTitle>
-                     <IonButton fill="outline" slot="end">View</IonButton>
+                     <IonButton
+                        fill="outline"
+                        slot="end"
+                        onClick={() => console.log('clicked')}
+                     >View</IonButton>
                   </IonItem>
 
                   <div className="avatar-container">
-                     {proj.avatars?.map(avatar => (
-                        <img className="card-avatar" src={avatar} alt="" />
+                     {proj.avatars?.map((avatar, i) => (
+                        <img className="card-avatar" src={avatar} alt="" key={i} />
                      ))}
                   </div>
 

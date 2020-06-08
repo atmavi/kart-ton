@@ -24,8 +24,8 @@ const Login: React.FC = () => {
    }
 
    function validatePassword() {
-      let pAlert = checkStrLength(username);
-      setUsernameAlert(pAlert);
+      let pAlert = checkStrLength(password);
+      setPassAlert(pAlert);
    }
 
    function handleSubmit() {
