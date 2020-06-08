@@ -23,11 +23,6 @@ const Register: React.FC = () => {
       setUsernameAlert(uAlert);
    }
 
-   function validatePassword() {
-      let pAlert = checkStrLength(username);
-      setUsernameAlert(pAlert);
-   }
-
    function validateBothPass() {
       setPassAlert(doesPasswordsMatch(pass1, pass2));
       console.log(userPassAlert)
