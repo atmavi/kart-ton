@@ -1,0 +1,47 @@
+[
+   {
+      "id": "0001",
+      "deliveryDate": "Jun 1, 2020",
+      "comments": [
+         "Danda!",
+         "Wowwowow!!!"
+      ],
+      "photos": "/",
+      "items": "Hollow block",
+      "itemsId": "HB0001",
+      "itemName": "Hollow block",
+      "description": "Holllow block",
+      "quantity": 1000,
+      "unit": "NA"
+   },
+   {
+      "id": "0002",
+      "deliveryDate": "Mar 16, 2020",
+      "comments": [
+         "Wait wait",
+         "Wat the...!!!"
+      ],
+      "photos": "/",
+      "items": "Thumb tacks",
+      "itemsId": "TT0001",
+      "itemName": "Thumb tacks",
+      "description": "Thumb tacks",
+      "quantity": 50,
+      "unit": "box"
+   },
+   {
+      "id": "0002",
+      "deliveryDate": "Mar 16, 2020",
+      "comments": [
+         "Wait wait",
+         "Wat the...!!!"
+      ],
+      "photos": "/",
+      "items": "Thumb tacks",
+      "itemsId": "TT0001",
+      "itemName": "Thumb tacks",
+      "description": "Thumb tacks",
+      "quantity": 50,
+      "unit": "box"
+   }
+]
