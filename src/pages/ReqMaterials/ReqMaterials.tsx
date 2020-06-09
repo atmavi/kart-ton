@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
    IonContent,
    IonHeader,
@@ -10,7 +10,6 @@ import {
    IonIcon,
    IonList,
    IonItem,
-   IonLabel,
    IonCard,
    IonCardHeader,
    IonCardSubtitle,
@@ -38,11 +37,8 @@ interface IRequestMaterial {
 }
 
 const ReqMaterials: React.FC = () => {
-
-   console.log(data)
    const [formDisplay, setFormDisplay] = useState<boolean>(false);
    const [reqItems, setReqItems] = useState<any[]>(data);
-
 
    function ToggleDisplay() {
       setFormDisplay(!formDisplay);
@@ -73,7 +69,7 @@ const ReqMaterials: React.FC = () => {
                         </IonCardHeader>
 
                         <IonCardContent>
-                           {item.description}
+                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, et nisi iure similique blanditiis vero sint a, nobis tempora, ad temporibus. Ab culpa exercitationem iste natus tenetur saepe quae sapiente?
                         </IonCardContent>
                      </IonCard>
                   </IonItem>
