@@ -10,19 +10,25 @@ import {
    IonIcon,
    IonList,
    IonItem,
-   IonLabel
+   IonLabel,
+   IonCard,
+   IonCardHeader,
+   IonCardSubtitle,
+   IonCardTitle,
+   IonCardContent
 } from '@ionic/react';
+import { add, close } from 'ionicons/icons';
+import './ReqMaterials.css';
 
 import RequestMaterialForm from '../../components/RequestmaterialForm/RequestMaterialForm';
 
-import { add, close } from 'ionicons/icons'
-import './ReqMaterials.css';
+import data from './sample.json';
 
 interface IRequestMaterial {
    id: string,
    deliveryDate: string,
-   comments?: string,
-   photos?: string,
+   comments?: Array<string>,
+   photos?: Array<string>,
    items: string,
    itemsId?: string,
    itemName: string,
@@ -32,7 +38,10 @@ interface IRequestMaterial {
 }
 
 const ReqMaterials: React.FC = () => {
+
+   console.log(data)
    const [formDisplay, setFormDisplay] = useState<boolean>(false);
+   const [reqItems, setReqItems] = useState<any[]>(data);
 
 
    function ToggleDisplay() {
@@ -55,8 +64,32 @@ const ReqMaterials: React.FC = () => {
             </IonFab>
 
             <IonList>
+               {reqItems.map((item, i) => (
+                  <IonItem key={i}>
+                     <IonCard>
+                        <IonCardHeader>
+                           <IonCardSubtitle>{item.id}</IonCardSubtitle>
+                           <IonCardTitle>{item.itemName}</IonCardTitle>
+                        </IonCardHeader>
+
+                        <IonCardContent>
+                           {item.description}
+                        </IonCardContent>
+                     </IonCard>
+                  </IonItem>
+               ))}
                <IonItem>
-                  <IonLabel>Req item 1</IonLabel>
+                  <IonCard>
+                     <IonCardHeader>
+                        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+                        <IonCardTitle>Card Title</IonCardTitle>
+                     </IonCardHeader>
+
+                     <IonCardContent>
+                        Keep close to Nature's heart... and break clear away, once in awhile,
+                        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+                     </IonCardContent>
+                  </IonCard>
                </IonItem>
             </IonList>
 
