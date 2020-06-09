@@ -123,7 +123,12 @@ const RequestMaterialForm: React.FC<{ formDisplay: boolean }> = props => {
 
          </IonItemGroup>
 
-         <IonButton expand="block" className="ion-margin-top">Send</IonButton>
+         <IonButton
+            expand="block"
+            className="ion-margin-top"
+            color="success">
+            Send
+         </IonButton>
 
       </form>
    );
