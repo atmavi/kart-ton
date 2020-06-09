@@ -19,7 +19,9 @@ import {
    IonItemDivider
 } from '@ionic/react';
 
-import { add } from 'ionicons/icons'
+import RequestMaterialForm from '../../components/RequestmaterialForm/RequestMaterialForm';
+
+import { add, close } from 'ionicons/icons'
 import './ReqMaterials.css';
 
 interface IRequestMaterial {
@@ -55,7 +57,7 @@ const ReqMaterials: React.FC = () => {
             <IonFab vertical="bottom" horizontal="end" slot="fixed">
                <IonFabButton
                   onClick={ToggleDisplay}>
-                  <IonIcon icon={add} />
+                  <IonIcon icon={formDisplay ? close : add} />
                </IonFabButton>
             </IonFab>
 
@@ -66,7 +68,7 @@ const ReqMaterials: React.FC = () => {
             </IonList>
 
 
-            <form action=""
+            {/* <form action=""
                className={`
                ion-margin-top
                ${!formDisplay && 'ion-hide'}
@@ -174,7 +176,7 @@ const ReqMaterials: React.FC = () => {
 
                <IonButton expand="block" className="ion-margin-top">Send</IonButton>
 
-            </form>
+            </form> */}
          </IonContent>
       </IonPage>
    );
