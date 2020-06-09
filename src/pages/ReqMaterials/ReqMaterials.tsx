@@ -10,13 +10,7 @@ import {
    IonIcon,
    IonList,
    IonItem,
-   IonLabel,
-   IonInput,
-   IonButton,
-   IonTextarea,
-
-   IonItemGroup,
-   IonItemDivider
+   IonLabel
 } from '@ionic/react';
 
 import RequestMaterialForm from '../../components/RequestmaterialForm/RequestMaterialForm';
@@ -39,7 +33,6 @@ interface IRequestMaterial {
 
 const ReqMaterials: React.FC = () => {
    const [formDisplay, setFormDisplay] = useState<boolean>(false);
-   const [showPopover, setShowPopover] = useState(false);
 
 
    function ToggleDisplay() {
