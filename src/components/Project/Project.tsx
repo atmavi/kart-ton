@@ -17,7 +17,8 @@ interface IProjectProp {
 
 
 const Project: React.FC<IProjectProp> = props => {
-   const { title, avatars, start, end } = props.project;
+   const { project } = props
+   const { title, avatars, start, end } = project;
    return (
       <IonCard class="ion-padding-top ion-padding-bottom">
          <IonItem>
