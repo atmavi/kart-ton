@@ -14,7 +14,8 @@ import {
    IonCardHeader,
    IonCardSubtitle,
    IonCardTitle,
-   IonCardContent
+   IonCardContent,
+   IonRouterLink
 } from '@ionic/react';
 import { add, close } from 'ionicons/icons';
 import './ReqMaterials.css';
@@ -52,11 +53,14 @@ const ReqMaterials: React.FC = () => {
             </IonToolbar>
          </IonHeader>
          <IonContent className="ion-padding">
+
             <IonFab vertical="bottom" horizontal="end" slot="fixed">
-               <IonFabButton
-                  onClick={ToggleDisplay}>
-                  <IonIcon icon={formDisplay ? close : add} />
-               </IonFabButton>
+               <IonRouterLink href='/'>
+                  <IonFabButton
+                     onClick={ToggleDisplay}>
+                     <IonIcon icon={add} />
+                  </IonFabButton>
+               </IonRouterLink>
             </IonFab>
 
             <IonList>
@@ -92,7 +96,7 @@ const ReqMaterials: React.FC = () => {
             <RequestMaterialForm formDisplay={formDisplay} />
 
          </IonContent>
-      </IonPage>
+      </IonPage >
    );
 };
 
